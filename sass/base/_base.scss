@@ -1,0 +1,53 @@
+html {
+	font: 16px sans-serif;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+
+a, a:hover, a:focus, a:active {
+
+}
+
+* {
+  @include selection(#3D87E4, #fff);
+}
+
+a {
+	@include transition(0.3s);
+	border-bottom: 1px dotted #888;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+h1 {
+	font-size: 37px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 25px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+iframe {
+	width: 100%;
+}
+
+label {
+	display: inherit;
+}

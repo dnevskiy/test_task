@@ -1,0 +1,417 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "./base/variables";
+@import "./base/mixins";
+
+p {
+	font: 400 $input-small $font-secondary;
+	color: rgb(148, 148, 148);
+	line-height: 26px;
+}
+
+h1 {		
+	@include text-shadow(rgba(0, 0, 0, 0.05) 0 2px 2px);
+	color: white;
+	font: 700 35px $font-primary;
+	letter-spacing: 68px;
+	margin-top: 10px;
+	@include mobile {
+		display: none;
+	}
+}
+
+h3 {
+	font: 800 $input-medium $font-primary;
+	text-transform: uppercase;
+	line-height: 64px;
+}
+
+.welcome {
+	.item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+		width: 100%;
+		&:nth-child(2n+1) {
+			@include mobile {
+				flex-direction: column;
+			}			
+		}
+		&:nth-child(2n) {
+			@include mobile {
+				flex-direction: column-reverse;
+			}			
+		}
+	}
+	.info {		
+		padding: 50px 10% 0;
+		@include mobile {
+			text-align: center;
+		}
+	}
+}
+
+
+.left {
+	text-align: left;
+}
+
+.center {
+	text-align: center;
+	@include clearfix;
+}
+
+.v-line {
+	width: 2px;
+	height: 30px;
+	@include opacity(0.2);
+	background-color: rgb(25, 25, 25);
+	margin-right: 2%;
+		@include mobile {
+			width: 100%;
+			height: 1px;	
+		}
+		@include tablet {
+			display: none;	
+		}
+}
+
+.about {
+	@include clearfix;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 160px auto 50px auto;
+	width: 100%;
+	@include mobile {
+		margin-top: 60px;
+		width: 100%;
+		flex-direction: column;
+	}
+	@include tablet {
+		width: 90%;
+	}
+}
+.text {
+	flex-basis: 45%;
+	@include mobile {
+		padding: 50px 10% 0;
+	}
+	@include tablet {
+		flex-basis: 45%;
+	}
+}
+
+.btn-holder {
+	margin: 20px auto;
+}
+
+.btn-primary {
+	color: white;
+	background-color: $brand-color;
+	font-family: $font-primary;
+	padding: 10px 13px;
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-bottom: none;
+	display: inline-block;
+	&:hover {
+		color: $alt-color;
+	}
+}
+
+.btn {
+	font-family: $font-primary;
+	width: 130px;
+	padding: 10px 0;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	display: inline-block;
+	border-bottom: none;
+	margin-right: 10px; 
+}
+
+.btn-secondary {	
+	@extend .btn;
+	background-color: $brand-color;
+	border: 2px solid $brand-color;
+	color: white;
+	&:hover {
+		color: $alt-color;
+	}
+}
+.btn-alt {	
+	@extend .btn;
+	background-color: none;
+	border: 2px solid lighten( $base-color, 20% );
+	color: darken( $base-color, 20% );
+	&:hover {
+		color: $brand-color;
+	}
+}
+.btn-alt-2 {	
+	@extend .btn;
+	background-color: none;
+	border: 2px solid darken( $base-color, 20% );
+	color: white;
+	&:hover {
+		color: $brand-color;
+	}
+}
+
+.team {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@include mobile {
+			justify-content: center;
+		}
+			.item {
+				margin-bottom: 60px;
+				flex-basis: 30%;
+				@include mobile {
+					flex-basis: 90%;
+				}
+				@include tablet {
+					flex-basis: 45%;
+				}
+			}
+	}
+	.name {
+		color: $alt-color;
+		font: 700 15px $font-primary;
+		margin-top: 50px;
+	}
+	.position {
+		color: $alt-color;
+		font: 500 15px $font-primary;
+		line-height: 30px;
+		text-transform: uppercase;
+	}
+	.description {
+		color: $base-color;
+		font: 400 14px $font-secondary;
+		line-height: 26px;
+		margin: 40px 0px 30px;
+		position: relative;
+		&:before{
+			content: '';
+		  position: absolute;		  
+		  top: -20px;
+		  width: 30px;
+		  height: 2px;
+		  @include mobile {
+		  	height: 4px;
+		  	width: 60px;
+		  }
+		  background-color: lighten( $base-color, 20%);
+		}
+	}
+	.socprofile {
+		a {
+			color:  $base-color;
+			border-bottom: none;
+			margin-right: 10px;
+			font-size: 18px;
+			&:hover {
+				color:  $brand-color;
+			}
+		}
+	}
+}
+
+
+
+
+// Gallery Frostbite
+#slider {
+	position: relative;
+	height: 860px;
+	width: 80%;
+	margin: 0 auto;	
+	@include clearfix;
+	@include mobile {
+			width: 100%;
+			padding-bottom: 40px;
+			overflow: hidden;
+	}
+	@include tablet {
+			width: 100%;
+			padding-bottom: 80px;
+			overflow: hidden;
+	}
+	.item {
+		width: 100%;
+		height: 100%;
+		&.active {
+			@include opacity(1);
+		}
+	}
+	.imgwrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 50px;
+		@include tablet {
+			margin-right: -25%;
+			padding-left: 25%;
+		}		
+	}
+	.show-current-image {
+		width: 600px;
+		height: 600px;
+		overflow: hidden;
+		position: relative;	
+		margin-right: 5%;
+		
+		@include mobile {
+			width: 90%;
+			margin: 0 auto;
+		}
+		img {
+			position: absolute;
+			top:0; left:0; bottom: 0; right: 0;
+			@include opacity(0);
+			@include transition(.3s);
+			&.active {
+				@include opacity(1);
+			}	
+		}
+	}
+	.show-next-image {
+		width: 450px;
+		height: 450px;		
+		overflow: hidden;
+		position: relative;
+		@include mobile {
+			display: none;
+		}
+		img {
+			position: absolute;
+			top:0; left:0; bottom: 0; right: 0;
+			@include opacity(0);
+			@include transition(.3s);
+			&.active {
+				@include opacity(1);
+			}			
+		}
+	}
+	.info {
+		margin-bottom: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		@include clearfix;
+		@include mobile {
+			width: 90%;
+		}
+		@include tablet {
+			padding-right: 20%;
+		}
+	}
+	.holder {
+		width: 40%;
+		position: relative;
+		@include tablet{
+			width: 50%;
+			float: right;
+		}
+		@include mobile{
+			width: 100%;
+		}
+	}
+	.slide-text {
+		@include transition(.3s);
+		@include opacity(0);
+		position: absolute;
+		&.active {
+			@include opacity(1);
+		}
+		p {
+			margin-bottom: 40px;
+		}
+		@include mobile {
+			text-align: center;
+			width: 100%;
+		}
+		span {
+			color: $base-color;
+			font: 400 $input-small $font-secondary;
+			font-style: italic;
+			i {
+				margin-right: 10px;
+			}
+		}
+	}
+	.bullets {
+		width: 55%;
+		margin-top: 70px;
+		float: right;
+		text-align: right;
+		font: 700 20px $font-primary;
+		color: $base-color;
+		line-height: 43px;
+		text-transform: uppercase;
+		position: relative;
+		@include mobile {
+			display: none;
+		}
+		@include tablet {
+			width: 45%;
+			float: left;
+		}
+		.line {
+			position: absolute;
+			height: 1px;
+			width: 100%;
+			top: 50%;
+			@include opacity(0.3);
+			background-color: $base-color;
+			z-index: -1;	
+		}
+		span {
+			padding: 10px;
+			background-color: white;
+			cursor: pointer;
+			@include transition(.3s);
+			&.active {
+				color: $alt-color;
+			}			
+			&:hover {
+				color: $alt-color;
+			}
+		}
+	}
+	.nav {
+		position: absolute;
+		top: 34%;
+		margin-left:0;
+		margin-right: 0;
+		font-size: 12px;
+		span {			
+			@include transition(.3s);
+			color: $base-color;
+			cursor: pointer;
+			&:hover {
+				color: $alt-color;
+			}
+		}
+		&.prev {
+			left: -5%;
+		}
+		&.next {
+			left: 103%;
+		}
+		@include mobile {
+			display: none; 
+		}
+		@include tablet {
+			display: none;
+		}
+	}
+}

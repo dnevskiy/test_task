@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "test_task";
+  src: url('../fonts/test_task.eot?cpjiz5&1453715566');
+  src: url('../fonts/test_task.eot?cpjiz5?&1453715566#iefix') format('embedded-opentype'), url('../fonts/test_task.ttf?cpjiz5&1453715566') format('truetype'), url('../fonts/test_task.woff?cpjiz5&1453715566') format('woff'), url('../fonts/test_task.svg?cpjiz5&1453715566#test_task') format('svg');
+}
+i {
+    font-family: 'test_task';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-el-clock:before {
+    content: "\31";
+}
+.icon-el-waves:before {
+    content: "\32";
+}
+.icon-logo:before {
+    content: "\33";
+}
+.icon-m-close:before {
+    content: "\34";
+}
+.icon-m-ellipse:before {
+    content: "\35";
+}
+.icon-m-menu:before {
+    content: "\36";
+}
+.icon-m-rectangle:before {
+    content: "\37";
+}
+.icon-m-romb:before {
+    content: "\38";
+}
+.icon-m-triangle:before {
+    content: "\39";
+}
+.icon-soc-facebook:before {
+    content: "\71";
+}
+.icon-soc-twitter:before {
+    content: "\77";
+}
+.icon-u-arrow-to-down:before {
+    content: "\65";
+}
+.icon-u-arrow-to-left:before {
+    content: "\72";
+}
+.icon-u-arrow-to-right:before {
+    content: "\74";
+}
+.icon-u-play:before {
+    content: "\79";
+}
+.icon-u-search:before {
+    content: "\75";
+}

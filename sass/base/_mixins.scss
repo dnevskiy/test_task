@@ -1,0 +1,93 @@
+// clearfix-1
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+// .container-with-floated-children {
+//   @extend %clearfix;
+// }
+
+// clearfix-2
+@mixin clearfix {
+	&:after{
+		content: '';
+		display: table; 
+		clear: both;
+	}
+}
+// .container-with-floated-children {
+//   @include clearfix;
+// }
+
+// Align block on center
+@mixin center_img($width: 150px, $height: 150px, $img: 'img', $help_el: 'span')
+{
+   overflow: hidden;
+   width: $width;
+   height: $height;
+   text-align: center;
+   white-space: nowrap;
+ 
+   &, #{$img}, #{$help_el} {@extend %inline-block;}
+   #{$help_el} {height: 100%}
+}
+%inline-block {
+   display: -moz-inline-stack;
+   display: inline-block;
+   vertical-align: middle;
+   zoom: 1;
+   *display: inline;
+}
+// Exaple
+// .centered-img {
+// 	@include center_img(150px,150px, 'img', 'span')
+// }
+
+@mixin ulmnu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+		& li {
+			display: inline-block;
+		}
+}
+
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
+// Convert px tp em
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+// Convert px tp rem
+@mixin to-rem($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Media Queries
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

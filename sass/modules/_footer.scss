@@ -1,0 +1,134 @@
+@import "../node_modules/susy/sass/susy";
+
+.footer-primary {
+	background-color: $alt-color;
+	@include clearfix;
+	.content {
+		padding: 80px 0;
+		margin: 0 5%;
+	}
+	.logo {
+		a {
+			color: white;
+			border-bottom: none;
+			&:hover {
+				color: $brand-color;
+			}
+		}		
+	}
+	ul {
+		li {
+			padding-bottom: 20px;
+		}
+		a {
+			color: white;
+			border-bottom: none;
+			&:hover {
+				border-bottom: 1px solid white;
+			}
+		}
+	}
+	.follow {
+		a {
+			color:  white;
+			border-bottom: none;
+			margin-right: 10px;
+			font-size: 18px;
+			&:hover {
+				color:  $brand-color;
+			}
+		}
+	}
+}
+.newsletter {
+	p {
+		color: white;
+		font: 400 12px/20px OpenSans,sans-serif;		
+		span {
+			text-transform: uppercase;
+			font: 400 14px/26px OpenSans,sans-serif;
+		}
+	}
+}
+input {
+	font-size: 14px;
+	color: $base-color;
+	border: 2px solid $base-color;
+	box-shadow: none;
+	background: none;
+	padding: 10px 15px;
+	display: block;
+	margin-top: 20px;
+	width: 80%;
+	background-image: url('../img/u-arrow-to-right.svg');   
+  background-repeat: no-repeat;   
+  background-position: 95%;
+  @include transition(0.3s);
+	&:focus {
+    border-color: $brand-color;
+	}
+}
+
+$susy: (
+  columns: 12,
+  math: fluid,
+  output: float,
+  gutters: 1/4,
+  gutter-position: inside,
+);
+
+.footer-primary {
+	.wrap {
+	  @include container (12);
+	 // @include container(show overlay);
+	}
+}
+
+.narrow {
+	@include span(2);
+	@include mobile {
+		@include span(12);
+		padding-bottom: 40px;
+	}
+}
+.narrow-bottom {
+	@include span(2);
+	@include tablet {
+	@include mobile {
+		text-align: left;
+		padding-top: 40px;
+	}
+		@include span(12);
+		text-align: center;
+		padding-top: 80px;
+	}
+}
+.wide {
+	@include span(4 nest);
+	@include mobile {
+		@include span(12);
+		padding-bottom: 40px;
+	}
+	@include tablet {
+		@include span(6);
+	}
+}
+.wide-last {
+	@include span(last 4);
+	@include mobile {
+		@include span(12);
+		padding-bottom: 40px;
+	}
+	@include tablet {
+		@include span(4);
+	}
+}
+.inner {
+	@include span(2 of 4);
+	@include mobile {
+		@include span(6 of 12);
+	}
+	@include tablet {
+		@include span(3 of 6);
+	}
+}

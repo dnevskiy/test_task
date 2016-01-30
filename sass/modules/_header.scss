@@ -1,0 +1,90 @@
+@import "compass/css3";
+@import "compass/utilities";
+@import "./base/variables";
+@import "./base/mixins";
+
+.header-primary {
+	@include background-size(cover);
+	position: relative;
+	box-sizing: border-box;
+	padding: 20px;
+	@include transition(0.3s);
+	@include mobile {
+		height: 750px;
+	}
+	@include tablet {
+		height: 770px;
+	}
+	@include desktop {
+		height: 900px;
+	}
+}
+
+@include mobile {
+	.back-to-fit {
+		background: url("../img/background-mobile.jpg") no-repeat scroll center top / cover;
+	}
+}
+@include tablet {
+	.back-to-fit {
+		background: url("../img/background-tablet.jpg") no-repeat scroll center top / cover;
+	}
+}
+@include desktop {
+	.back-to-fit {
+		background: url("../img/background-desktop.jpg") no-repeat scroll center top / cover;
+	}
+}
+
+
+.nav-bar {
+	@include clearfix;
+	width: 100%;
+	max-width: 1360px;
+	a {
+		color: $base-color;
+		border-bottom: none;
+		&:hover {
+			color: $brand-color;
+		}
+	}
+	.logo {
+		float: left;
+	}
+	.ui {
+		float: right;
+		ul {
+			@include ulmnu;
+		}
+		li {
+			padding-left: 18px;
+		}
+	}
+}
+
+.head-title {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+
+.slide-bottom {
+	position: absolute;
+	bottom: 3%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	animation: 1.5s ease 0s normal none infinite running bobber;
+	a {
+		color: white;
+		border-bottom: none;
+		&:hover {
+			color: $brand-color;
+		}
+	}
+	
+}

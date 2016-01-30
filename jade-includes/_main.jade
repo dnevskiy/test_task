@@ -1,0 +1,115 @@
+main
+	//who-we-are
+	section.welcome#welcome
+		.content
+			.title.center
+				h2 a team of creatives <br>based out of california
+			.item
+				.holder
+					.info
+						h3 who we are
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus animi cum velit molestiae deserunt quos in enim voluptas! Nulla eligendi doloribus explicabo, amet magni quibusdam laborum omnis nihil aut.
+				.holder
+					img(src="img/whatweare.jpg",title="Title")
+			.item
+				.holder
+					img(src="img/whatwedo.jpg",title="Title")
+				.holder
+					.info
+						h3 what we do
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, cupiditate quam! Corrupti tempore adipisci ratione, est, commodi odio, at sed porro sunt tempora, quod magnam. Tempora reprehenderit maiores ipsum!
+			.about
+					.v-line
+					.text 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam saepe nihil perspiciatis officia hic architecto neque, illo ipsum quos veritatis mollitia. Tempora iure aliquam cum eum, commodi quo, minus maiores, quis nobis ut esse alias qui odit. Cupiditate nobis molestiae recusandae, blanditiis cum facere perferendis, atque quod. Ullam iure perspiciatis voluptatum, temporibus aliquam sapiente quam, fugit molestiae ipsa facilis repellat facere amet modi magnam. Quam tenetur neque, placeat voluptas molestiae ullam, dignissimos, vel ad reiciendis ipsum asperiores fugiat assumenda modi!
+					.text 
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique libero sint harum officia, cum aut tenetur nihil. Eveniet dolor blanditiis, sed sit vitae qui vero quaerat nisi quasi quia asperiores nostrum eum repudiandae tenetur repellendus minus, enim commodi illum saepe debitis, id pariatur quibusdam quidem cupiditate dolore. Placeat nostrum possimus rerum beatae. Odio dolorum, qui, reprehenderit minus blanditiis consectetur nisi tempore quia molestiae officia placeat similique odit commodi mollitia. Animi ad voluptatibus soluta ex asperiores nostrum itaque corporis molestiae accusamus.
+			.center
+				a.btn-secondary(href="/")
+					span journal		
+				a.btn-alt(href="/")
+					span our story
+
+	//projects
+	section.projects
+		.title.center
+			h2 latest projects
+			p Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium<br>egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+			.btn-holder 
+				a.btn-secondary(href="/")
+					span view projects
+				a.btn-alt-2(href="/")
+					span contact	
+		.background
+			div
+
+		#slider
+			.imgwrap
+				.show-current-image
+					img(src="img/slide-01.jpg")
+					img(src="img/slide-02.jpg")
+					img(src="img/slide-03.jpg")
+				.show-next-image
+					img(src="img/slide-01.jpg")
+					img(src="img/slide-02.jpg")
+					img(src="img/slide-03.jpg")
+			.info
+				.holder
+					.slide-text
+						h3 Lorem ipsum.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fuga quis omnis illum quas magni, distinctio optio reiciendis quo. Ipsum dignissimos dolores laudantium, quaerat ipsa aut ad libero, aliquid, quam saepe sapiente veniam commodi sequi.
+						span
+							i.f.icon-el-clock
+							|4 hours ago - by Andrew B.
+					.slide-text
+						h3 Dolor sit.
+						p Adipisicing elit. Quasi fuga quis omnis illum quas magni, distinctio optio reiciendis quo. Ipsum dignissimos dolores laudantium, quaerat ipsa aut ad libero, aliquid, quam saepe sapiente veniam commodi sequi.
+						span
+							i.f.icon-el-clock
+							|5 hours ago - by Andrew B.
+					.slide-text
+						h3 Amet consectetur.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi fuga quis omnis illum quas magni, distinctio optio reiciendis quo. Ipsum dignissimos dolores laudantium, quaerat ipsa aut ad libero, aliquid, quam.
+						span
+							i.f.icon-el-clock
+							|6 hours ago - by Andrew B.		
+				.bullets
+					.line
+					span 01
+					span 02
+					span 03
+			.nav.next
+				span
+					i.f.icon-u-arrow-to-right
+			.nav.prev
+				span
+					i.f.icon-u-arrow-to-left
+
+			
+
+	//team journal
+	section.journal
+			.float-img-holder
+				.float-bottom
+					.float-top
+						img(src="img/journal-float-2.jpg",title="Title")
+			.flex
+				.content
+					.title.left
+						h2 our journal
+						p Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+						.btn-holder 
+							a.btn-secondary
+								span read more
+	//team
+	section.team
+		.title.center
+			h2 our team
+		.content
+			.container
+				+team(teamImg)
+
+	// clients
+	section.clients
+		.owl-carousel
+			+listItemImg(ItemImg)

@@ -1,0 +1,34 @@
+mixin menu(items)
+	ul
+		each item in items
+			li: a(href="/") #{item}
+		
+mixin styles(files)
+	each file in files
+		link(rel="stylesheet", href=file)
+
+mixin js(files)
+	each file in files
+		script(src=file)
+
+mixin listItemImg(files)
+	each file in files
+		.item
+			img(src=file,title="Title")
+
+mixin menuF(items)
+	each item in items
+		li: a(href='/') #{item}
+
+mixin team(items)
+	each file, index in items
+		.item
+			img(src=file,title=index)
+			p.name John Doe
+			p.position CEO, Operations director
+			p.description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aspernatur! Veniam iure itaque neque exercitationem consequuntur.
+			p.socprofile
+				a(href="/")
+					i.f.icon-soc-twitter
+				a(href="/")
+					i.f.icon-soc-facebook
